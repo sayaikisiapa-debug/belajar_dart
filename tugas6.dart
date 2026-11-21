@@ -1,5 +1,5 @@
 void main(){
-  String sub = "abcacdcd";
+  String sub = "adcacdcd";
   String substring = "";
   int panjangMaks = 0;
   for(int i = 0; i < sub.length; i++){
