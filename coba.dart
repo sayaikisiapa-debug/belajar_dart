@@ -1,26 +1,20 @@
-String cariPalindrome(huruf, kiri, kanan){
-    while(kiri >= 0 && kanan < huruf.length && huruf[kiri] == huruf[kanan]){
-        kiri--;
-        kanan++;
+class Kendaraan{
+    String jenis;
+    String merk;
+    Kendaraan(this.jenis, this.merk);
+    void berjalan(){
+        print("$jenis $merk berjalan kencang");
     }
-    return huruf.substring(kiri + 1, kanan);
 }
-String palindromePanjang(huruf){
-    String hasil = "";
-    for(int i = 0; i < huruf.length; i++){
-        String ganjil = cariPalindrome(huruf, i, i);
-        String genap = cariPalindrome(huruf, i,i+1);
-        if(ganjil.length > hasil.length){
-            hasil = ganjil;
-        }else if(genap.length > hasil.length){
-            hasil = genap;
-        }
+class Motor extends Kendaraan{
+    Motor(super.jenis, super.merk);
+    void menyalakan(){
+        print("mesin dinyalakan");
     }
-    return hasil;
 }
 
 void main(){
-    String huruf = "kmamamji";
-    String hasil = palindromePanjang(huruf);
-    print("$hasil");
+    Motor mtr = Motor("motor", "honda");
+    mtr.menyalakan();
+    mtr.berjalan();
 }
