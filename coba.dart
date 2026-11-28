@@ -1,20 +1,19 @@
-class Kendaraan{
-    String jenis;
-    String merk;
-    Kendaraan(this.jenis, this.merk);
-    void berjalan(){
-        print("$jenis $merk berjalan kencang");
-    }
-}
-class Motor extends Kendaraan{
-    Motor(super.jenis, super.merk);
-    void menyalakan(){
-        print("mesin dinyalakan");
+class Mahasiswa{
+    String nama;
+    String nim;
+    String jurusan;
+    
+    Mahasiswa(this.nama, this.nim, this.jurusan);
+    
+    void tampilkan(){
+        print("Nama : $nama");
+        print("NIM : $nim");
+        print("Jurusan : $jurusan");
     }
 }
 
 void main(){
-    Motor mtr = Motor("motor", "honda");
-    mtr.menyalakan();
-    mtr.berjalan();
+    Mahasiswa mhs = Mahasiswa("Ach. Nabil Maulidi", "362658302021", "Informatika");
+    
+    mhs.tampilkan();
 }
